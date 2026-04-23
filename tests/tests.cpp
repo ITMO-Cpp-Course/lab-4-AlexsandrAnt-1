@@ -1,11 +1,12 @@
 #include <catch2/catch_test_macros.hpp>
-
-#include "resource_core.hpp"
+#include "ResourceManager.hpp"
+#include "FileHandle.hpp"
+#include "ReourceError.hpp"
 #include <cstdio>
 #include <fstream>
 
 using namespace lab4::resource;
-// Вспомогательная функция для создания временного файла
+
 void createDummyFile(const std::string& name)
 {
     std::ofstream out(name);
