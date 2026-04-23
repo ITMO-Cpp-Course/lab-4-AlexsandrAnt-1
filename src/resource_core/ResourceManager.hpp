@@ -1,17 +1,18 @@
 #pragma once
 #include "FileHandle.hpp"
-#include <string>
 #include <memory>
+#include <string>
 #include <unordered_map>
 
-namespace lab4::resource {
+namespace lab4::resource
+{
 
-class ResourceManager {
-public:
-    std::shared_ptr<FileHandle> getFile(const std::string& filename,
-                                         const std::string& mode = "r");
+class ResourceManager
+{
+  public:
+    std::shared_ptr<FileHandle> getFile(const std::string& filename, const std::string& mode = "r");
 
-private:
+  private:
     std::unordered_map<std::string, std::weak_ptr<FileHandle>> cache_;
 };
 

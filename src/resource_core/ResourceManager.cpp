@@ -1,15 +1,18 @@
 #include "ResourceManager.hpp"
 #include "FileHandle.hpp"
-namespace lab4::resource {
+namespace lab4::resource
+{
 
-std::shared_ptr<FileHandle> ResourceManager::getFile(const std::string& filename,
-                                                       const std::string& mode) {
+std::shared_ptr<FileHandle> ResourceManager::getFile(const std::string& filename, const std::string& mode)
+{
     std::string key = filename + ":" + mode;
 
     // Ищем в кеше
     auto it = cache_.find(key);
-    if (it != cache_.end()) {
-        if (auto shared = it->second.lock()) {
+    if (it != cache_.end())
+    {
+        if (auto shared = it->second.lock())
+        {
             return shared;
         }
     }

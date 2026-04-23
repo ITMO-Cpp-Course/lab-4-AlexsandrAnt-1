@@ -1,11 +1,13 @@
 #pragma once
-#include <string>
 #include <cstdio>
+#include <string>
 
-namespace lab4::resource {
+namespace lab4::resource
+{
 
-class FileHandle {
-public:
+class FileHandle
+{
+  public:
     FileHandle(const std::string& filename, const std::string& mode);
     ~FileHandle();
 
@@ -19,7 +21,7 @@ public:
 
     std::FILE* get() const noexcept;
 
-private:
+  private:
     std::FILE* file_;
 };
 

@@ -1,7 +1,7 @@
-#include <catch2/catch_test_macros.hpp>
-#include "ResourceManager.hpp"
 #include "FileHandle.hpp"
 #include "ReourceError.hpp"
+#include "ResourceManager.hpp"
+#include <catch2/catch_test_macros.hpp>
 #include <cstdio>
 #include <fstream>
 

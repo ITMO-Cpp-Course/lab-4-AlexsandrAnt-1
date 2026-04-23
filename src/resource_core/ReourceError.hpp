@@ -2,10 +2,12 @@
 #include <stdexcept>
 #include <string>
 
-namespace lab4::resource {
+namespace lab4::resource
+{
 
-class ResourceError : public std::runtime_error {
-public:
+class ResourceError : public std::runtime_error
+{
+  public:
     explicit ResourceError(const std::string& message);
 };
 
